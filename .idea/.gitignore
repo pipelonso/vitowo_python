@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.venv
+/.venv
+/Vitowo.iml
+/inspectionProfiles
+/vcs.xml
+/modules.xml
+/misc.xml
+

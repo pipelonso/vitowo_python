@@ -1,0 +1,10 @@
+.venv
+.pyc
+/.venv
+/inspectionProfiles
+/shelf/
+/workspace.xml
+/Vitowo.iml
+/vcs.xml
+/modules.xml
+/misc.xml
