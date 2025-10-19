@@ -6,4 +6,3 @@ class CaptainHook:
 
     def set_mic_db(self, value: float):
         self.mic_db = value
-

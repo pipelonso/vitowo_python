@@ -1,19 +1,22 @@
-from app.UrsinaMain import UrsinaMain
 import threading
-from tracker_core.MicrophoneCore import MicrophoneCore
 
+from buffer.CaptainHook import CaptainHook
+from tracker_core.MicrophoneCore import MicrophoneCore
+from app.Pyqt5Main import VitowoApp
 
 class AppLauncher:
 
-    def __init__(self):
+    def __init__(self,
+                 buffer: CaptainHook = None
+                 ):
 
-        self.microphone_core = MicrophoneCore()
+        self.microphone_core = MicrophoneCore(buffer)
 
         self.start_thread(self.run_mediapipe)
         self.start_thread(self.run_mic_service)
 
-        self.ursina_app = UrsinaMain()
-
+        self.vitowo_app = VitowoApp(buffer)
+        self.vitowo_app.run()
         pass
 
     def launch(self):
