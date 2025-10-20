@@ -13,10 +13,10 @@ class AppLauncher:
         self.microphone_core = MicrophoneCore(buffer)
 
         self.start_thread(self.run_mediapipe)
-        self.start_thread(self.run_mic_service)
 
-        self.vitowo_app = VitowoApp(buffer)
+        self.vitowo_app = VitowoApp(buffer, self)
         self.vitowo_app.run()
+
         pass
 
     def launch(self):

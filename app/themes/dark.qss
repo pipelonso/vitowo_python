@@ -1,0 +1,32 @@
+/*
+ * Dark - Qt Style Sheet
+ * Created: 19/10/25
+ */
+
+/* Base styling */
+QFrame {
+    background-color: #1C1917;
+    color: #D6D3D1;
+}
+
+QFrame[qclass="tittle_bg"]{
+    background-color: #666666;
+}
+
+QFrame[qclass="header_bg"]{
+    background-color: #2A2A2A;
+}
+
+QFrame[qround="2"] {
+    border-radius: 4px;
+}
+
+QLabel {
+    background-color: transparent;
+}
+
+QLabel[qclass="text_gray"]{
+   color: #999999;
+}
+
+/* Add your QSS styles here */

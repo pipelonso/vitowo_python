@@ -1,0 +1,24 @@
+QFrame {
+    background-color: #F1F5F9;
+    color: #292524;
+}
+
+QFrame[qclass="tittle_bg"]{
+    background-color: #999999;
+}
+
+QFrame[qround="2"] {
+    border-radius: 4px;
+}
+
+QLabel{
+    background-color: transparent;
+}
+
+QLabel[qclass="text_gray"]{
+   color: #45556C;
+}
+
+QFrame[qclass="header_bg"]{
+    background-color: #CCCCCC;
+}
