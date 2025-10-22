@@ -22,6 +22,10 @@ class VitowoApp:
         self.buffer = buffer
 
         self.language_controller = LanguageController()
+        self.current_language = self.language_controller.get_current_language()
+
+        if self.current_language not in self.language_controller.get_language_list():
+            raise Exception("Language configuration failed to load, not found language: " + self.current_language)
 
         self.theme_loader = ThemeLoader()
         self.settings_controller = SettingsController()

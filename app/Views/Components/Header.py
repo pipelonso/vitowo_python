@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QFrame, QLabel, QVBoxLayout, QHBoxLayout, QSizePolicy
+from PyQt5.QtWidgets import QFrame, QLabel, QVBoxLayout, QHBoxLayout, QSizePolicy, QPushButton
 
 from app.Controllers.LanguageController import LanguageController
 
@@ -14,9 +14,7 @@ class Header(QFrame):
         self.setProperty("qclass", "header_bg")
         self.setProperty("qround", "2")
         self.language_controller = LanguageController()
-        current_language = self.language_controller.get_current_language()
-
-        print(current_language)
+        self.current_language = self.language_controller.get_current_language()
 
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         self.layout = QHBoxLayout()
@@ -35,10 +33,23 @@ class Header(QFrame):
         self.layout.addWidget(self.tittle_bg_frame)
 
         self.title_label = QLabel("VITOWO")
-        self.title_label.setFont(QFont("Nunito", 15))
+        self.title_label.setFont(QFont("Nunito", 13))
         self.title_label.setProperty("qclass", "text-gray")
         self.tittle_bg_frame_layout.addWidget(self.title_label)
 
+        self.view_button = QPushButton()
+        self.view_button.setProperty("qclass", "just_text")
+        self.view_button.setText(
+            self.language_controller.translate(self.current_language, 'header.view_button')
+        )
+        self.layout.addWidget(self.view_button)
+
+        self.settings_button = QPushButton()
+        self.settings_button.setProperty("qclass", "just_text")
+        self.settings_button.setText(
+            self.language_controller.translate(self.current_language, 'header.settings_button')
+        )
+        self.layout.addWidget(self.settings_button)
 
     def set_project_tittle(self, tittle: str):
         self.project_tittle = tittle

@@ -38,10 +38,12 @@ class SettingsController:
         if not os.path.exists(self.file_name):
             self.generate_default_config()
 
-    def get_value(self, key_name: str):
+    def get_value(self, key_name: str) -> Any | None:
         json_content = self.get_file_dict_content()
         if key_name in json_content:
             return json_content[key_name]
+        else:
+            return None
 
     def generate_default_config(self):
         with open(self.file_name, mode='w') as file:

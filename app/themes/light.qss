@@ -22,3 +22,35 @@ QLabel[qclass="text_gray"]{
 QFrame[qclass="header_bg"]{
     background-color: #CCCCCC;
 }
+
+QPushButton {
+    background-color: #D1D5DC;
+    border-radius : 5px;
+    border: 1px solid #57534D;
+    padding : 4px;
+    color : #262626;
+}
+
+QPushButton::hover {
+    background-color: #A6A09B;
+    border-radius : 5px;
+    border: 1px solid #57534D;
+    padding : 4px;
+    color : #262626;
+}
+
+QPushButton[qclass="just_text"] {
+    background-color: transparent;
+    border-radius : 0;
+    border: none;
+    padding : 5px;
+    color : #262626;
+}
+
+QPushButton[qclass="just_text"]::hover {
+    background-color: #FFE4E6;
+    border-radius : 4;
+    border: solid 1px #E7E5E4;
+    padding : 5px;
+    color : #57534D;
+}
