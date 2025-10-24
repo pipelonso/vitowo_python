@@ -1,6 +1,6 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QFontDatabase, QFont
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QFrame
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QFontDatabase, QFont
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QFrame
 import sys
 
 from app.Controllers.LanguageController import LanguageController
@@ -47,7 +47,7 @@ class VitowoApp:
 
         self.header = Header()
         self.main_layout.addWidget(self.header)
-        self.main_layout.setAlignment(Qt.AlignTop)
+        self.main_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
         self.setup_start_process()
 
