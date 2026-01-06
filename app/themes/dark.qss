@@ -17,6 +17,30 @@ QFrame[qclass="header_bg"]{
     background-color: #2A2A2A;
 }
 
+QFrame[qclass="BG_1"]{
+    background-color: #393939; /* Base */
+}
+
+QFrame[qclass="BG_2"]{
+    background-color: #1F1F1F;
+}
+
+QFrame[qclass="BG_3"]{
+    background-color: #151515;
+}
+
+QFrame[qclass="BG_4"]{
+    background-color: #101010;
+}
+
+QFrame[qclass="BG_5"]{
+    background-color: #0B0B0B;
+}
+
+QFrame[qclass="BG_6"]{
+    background-color: #000000;
+}
+
 QFrame[qround="2"] {
     border-radius: 4px;
 }
@@ -30,11 +54,11 @@ QLabel[qclass="text_gray"]{
 }
 
 QPushButton {
-    background-color: #D1D5DC;
+    background-color: #333333;
     border-radius : 5px;
-    border: 1px solid #57534D;
+    border: 1px solid #2E2E2E;
     padding : 4px;
-    color : #262626;
+    color : #CCCCCC;
 }
 
 QPushButton::hover {
@@ -55,8 +79,16 @@ QPushButton[qclass="just_text"] {
 
 QPushButton[qclass="just_text"]::hover {
     background-color: #666666;
-    border-radius : 4;
+    border-radius : 4px;
     border: solid 1px #333333;
     padding : 5px;
     color : #99FFFF;
+}
+
+QSplitter {
+    background-color: transparent;
+}
+
+QScrollArea {
+    background-color: transparent;
 }
