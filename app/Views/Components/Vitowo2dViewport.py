@@ -22,7 +22,6 @@ class Vitowo2dViewport(QGraphicsView):
         self.scene.setBackgroundBrush(Qt.GlobalColor.white)
 
         self.svg_parser = SvgParser()
-        self.painter = QPainter()
         self.path_items: List[SvgPathItem] = []
 
     def wheelEvent(self, event):
@@ -40,7 +39,4 @@ class Vitowo2dViewport(QGraphicsView):
     def add_path_item(self, paths: List[QPainterPath]):
         svg = SvgPathItem(paths)
         self.scene.addItem(svg)
-        style = QStyleOptionGraphicsItem()
-        svg.paint(self.painter, style)
         self.path_items.append(svg)
-        pass
